@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { DataService } from 'src/app/services/data.service';
-import { SubRoundService } from 'src/app/services/sub-round.service';
+import { SerieService } from 'src/app/services/serie.service';
 import { mapToMockify } from '../mocks/mapToMockify';
 import { Mockify } from '../mocks/type';
 import { configureTests } from '../test.configure';
 
-describe('SubRoundService', () => {
-  let service: SubRoundService;
+describe('SerieService', () => {
+  let service: SerieService;
 
   // Const for testing
-  const testingUrl = 'subround';
+  const testingUrl = 'serie';
 
   // Mocks
   const mockDataService: Mockify<DataService> =
@@ -23,7 +23,7 @@ describe('SubRoundService', () => {
     };
 
     configureTests(configure).then(() => {
-      service = TestBed.inject(SubRoundService);
+      service = TestBed.inject(SerieService);
     });
   });
 

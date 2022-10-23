@@ -2,25 +2,25 @@ import { environment } from '../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { DataService } from './data.service';
-import { SubRound } from '../model/sub-round';
+import { Serie } from '../model/serie';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SubRoundService {
+export class SerieService {
   /**
    * Sub round endpoint url
    */
-  private url = `${environment.baseUrl}/subround`;
+  private url = `${environment.baseUrl}/serie`;
 
   constructor(private dataService: DataService) {}
 
   /**
-   * Get a sub round
+   * Get a serie
    * @param id Id
-   * @returns SubRound
+   * @returns Serie
    */
-  public get(id: number): Observable<SubRound> {
-    return this.dataService.fetchData<SubRound>(`${this.url}/${id}`);
+  public get(id: number): Observable<Serie> {
+    return this.dataService.fetchData<Serie>(`${this.url}/${id}`);
   }
 }
